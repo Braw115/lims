@@ -1,6 +1,6 @@
 # lims
-# [毕设:实验室信息管理系统](http://119.23.13.90:8080 "lims")
-###预览
+## [毕设:实验室信息管理系统](http://119.23.13.90:8080 "lims")
+### 预览
 	![login](https://raw.githubusercontent.com/Braw115/img-Server/master/login.bmp)
 	![notice](https://raw.githubusercontent.com/Braw115/img-Server/master/notice.bmp)
 ### 测试用户
