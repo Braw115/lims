@@ -1,0 +1,61 @@
+html {
+	
+    border-bottom-width: 0px;
+
+}
+#top {
+	
+    height: 90px;
+
+}
+#nav {
+    margin-top: 5px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    
+}
+
+#flu {
+	
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 40px;
+	background: #769D9C;
+
+}
+#well {
+	
+    padding-top: 9px;
+    margin-top: 0px;
+    height: 500px;
+    margin-bottom: 0px;
+    padding-bottom: 9px;
+	border-color:#769D9C;
+}
+#info {
+	border-color:#769D9C;	
+    width: 1001px;
+    height:382px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    
+
+}
+#con ul li{
+    height: 50px;
+    width: 140px;
+
+}
+#desc {
+	border-left-width: 0px;
+   	
+    margin-top: 45px;
+	margin-left: 500px;
+}
