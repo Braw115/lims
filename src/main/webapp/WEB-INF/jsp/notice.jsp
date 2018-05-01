@@ -9,11 +9,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" type="text/css" href="/js/ueditor/themes/default/css/ueditor.css"/>
 -->
 
-<form action="/" >
+<form>
 </br>
- 公告标题：<input id="title style="width: 225px;"/><br/><br/>
+ 公告标题：<input id="notice_title" name="notice_title"/> 发布单位：<input id="dept" name="dept"/><br/><br/>
 <script id="editor" type="text/plain" style="width:1000px;height:252px;"></script><br/>
-<input  id="sub" type="submit" value="发布公告"/>
+<input  id="but" type="button" value="发布公告"/>
 </form>
 <script type="text/javascript">     
     var ue = UE.getEditor('editor',
@@ -22,25 +22,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         initialFrameHeight: 150
     }
     );
-    $("#submit").click(function(){
-    	var title = $("#title").val();
+    $('#but').click(function(){
+    	var notice_title = $("input[name='notice_title']").val();
         var content = UE.getEditor('editor').getContent();
+        var dept =$("input[name='dept']").val(); 
         $.ajax({
             cache: true,
-            type: "GET",
-            url: "/notice/add",
-　　　　　　　　data: {
-				"title":title,
-				"content":content
-　　　　　　
+            type: 'POST',
+            url: '/notice/announce',
+            dataType: 'json',
+　　　　　　　　   data: {
+				"title":notice_title,
+				"content":content,
+				"announceDept":dept
 　　　　　　　　},
 
-            async: false,
+            async: true,
             error: function(request) {
-                alert("Connection error");
+                alert("发布失败");
             },
-            success: function(){
-                alert("success");
+            success: function(data){
+                alert(data.message);
+               window.location.reload();
             }
         });
     });

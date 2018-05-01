@@ -233,10 +233,19 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
+					<!-- 远程部署-->
+					<!--
 					<path>/ROOT</path>
 					<url>http://119.23.13.90:8080/manager/text</url>
 					<update>true</update>
 					<server>tomcat7</server>
+					<username>tomcat</username>
+					<password>tomcat</password>
+					 -->
+					 <!-- 本地部署  -->
+					 <path>/</path>
+					 <port>8080</port>
+					 <server>tomcat7</server>
 					<username>tomcat</username>
 					<password>tomcat</password>
 				</configuration>
