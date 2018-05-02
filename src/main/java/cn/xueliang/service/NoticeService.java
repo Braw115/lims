@@ -1,5 +1,7 @@
 package cn.xueliang.service;
 
+import java.util.List;
+
 import cn.xueliang.pojo.Notice;
 
 /**
@@ -10,5 +12,6 @@ import cn.xueliang.pojo.Notice;
 public interface NoticeService {
 	//发布公告
 	public  int announce(Notice notice);
-	
+	//查询最新2条公告
+	List<Notice> selectNewNotice();
 }

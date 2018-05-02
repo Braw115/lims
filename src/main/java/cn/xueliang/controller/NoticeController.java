@@ -1,11 +1,13 @@
 package cn.xueliang.controller;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import cn.xueliang.pojo.Notice;
 import cn.xueliang.service.NoticeService;
@@ -25,5 +27,15 @@ public class NoticeController {
 		}else{			
 			return new Result("no","·¢²¼Ê§°Ü");
 		}
+	}
+	@RequestMapping("/getNewNotice")
+	@ResponseBody
+	public ModelAndView getNewNotice(){
+		List<Notice> noticeList = noticeService.selectNewNotice();
+		ModelAndView model =new ModelAndView();
+		model.addObject("noticeList",noticeList);
+		model.setViewName("noticeInfo");
+		return model;
+
 	}
 }

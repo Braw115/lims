@@ -18,6 +18,8 @@ public interface NoticeMapper {
 
     List<Notice> selectByExampleWithBLOBs(NoticeExample example);
 
+    List<Notice> selectNewNotice();
+
     List<Notice> selectByExample(NoticeExample example);
 
     Notice selectByPrimaryKey(Integer id);

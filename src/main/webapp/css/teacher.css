@@ -1,11 +1,10 @@
-html {
-	
-    border-bottom-width: 0px;
-
+html,body{
+    width:100%;
+    height:100%
 }
 #top {
 	
-    height: 90px;
+    height: 15%;
 
 }
 #nav {
@@ -17,6 +16,7 @@ html {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 0px;
+    height: 90%;
     
 }
 
@@ -32,15 +32,15 @@ html {
 	
     padding-top: 9px;
     margin-top: 0px;
-    height: 500px;
+    height: 93%;
     margin-bottom: 0px;
     padding-bottom: 9px;
 	border-color:#769D9C;
 }
 #info {
 	border-color:#769D9C;	
-    width: 1001px;
-    height:382px;
+    width: 85%;
+    height: auto;
     padding-top: 0px;
     padding-left: 0px;
     padding-bottom: 0px;
@@ -56,6 +56,6 @@ html {
 #desc {
 	border-left-width: 0px;
    	
-    margin-top: 45px;
-	margin-left: 500px;
+    margin-top: -2%;
+	margin-left: 40%;
 }

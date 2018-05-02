@@ -171,6 +171,11 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+
+  <select id="selectNewNotice" resultMap="ResultMapWithBLOBs">
+    select *FROM notice ORDER BY id DESC LIMIT 2;
+  </select>
+
   <update id="updateByExampleSelective" parameterType="map" >
     update notice
     <set >
